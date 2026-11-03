@@ -1,0 +1,275 @@
+{
+  "single_hop": [
+    {
+      "q": "更新应用标注的接口路径是什么？",
+      "ref": "put /apps/annotations/{annotation_id}",
+      "answer": "根据现有资料无法回答。资料中没有给出更新标注接口的具体路径。",
+      "correct": false,
+      "refused": true,
+      "cited": false
+    },
+    {
+      "q": "停止 completion-messages 任务要调哪个接口？",
+      "ref": "POST /completion-messages/{task_id}/stop",
+      "answer": "停止 completion-messages 任务要调用“停止响应”接口（stop-completion-message-generation）[1][3]。",
+      "correct": false,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "macOS 上装 difyctl 那个脚本会把它装到哪个目录？",
+      "ref": "脚本会安装到 ~/.local/bin/difyctl",
+      "answer": "macOS 上安装脚本会把 difyctl 装到 `~/.local/bin/difyctl` [3]。",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "difyctl 列表命令默认一页显示多少条啊？能改吗？",
+      "ref": "默认页大小是 20，可以通过 DIFY_LIMIT 变量修改，取值 1 到 200，且 --limit 参数优先级高于该变量。",
+      "answer": "difyctl 列表命令默认一页显示 20 条 [1]。可以改：通过 `DIFY_LIMIT` 环境变量设置（取值 1 到 200），且 `--limit` 参数的优先级高于该变量 [1]。",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "不加 -o 参数的时候默认输出里都有啥内容？",
+      "ref": "完整报告：一个 Client 区块、一个 Server 区块，以及一行 Compatibility 判定；当版本所在的发布通道不是 stable 时，会追加一条建议改用 stable 通道的警告。",
+      "answer": "不加 `-o` 参数时默认输出（`text` 格式）包含：一个对齐的字段块，随后是应用的参数（含用户输入表单）[1]。",
+      "correct": false,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "怎么让聊天助手根据不同用户自动填不同的信息，不用每次都改提示词？",
+      "ref": "可以添加变量来预先收集必要的信息，变量是提示词中的占位符，每个变量都会显示为一个输入字段，用户在对话开始前填写，其值在运行时注入提示词。",
+      "answer": "可以添加变量来预先收集必要的信息。变量是提示词中的占位符，每个变量会显示为一个输入字段，用户在对话开始前填写，其值在运行时注入提示词，从而无需每次重写提示词 [1][2]。",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "哪些节点可以设置错误处理？",
+      "ref": "大型语言模型、HTTP、代码和工具节点",
+      "answer": "根据资料，工具节点支持开箱即用的错误处理 [2]；迭代节点可以通过错误处理模式设置选择如何处理子节点失败 [1]。",
+      "correct": false,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "Workflow 和 Chatflow 在用户交互上到底有啥区别？",
+      "ref": "工作流从头到尾运行一次，Chatflow 增加了对话层。",
+      "answer": "Workflow 从头到尾运行一次，接收输入、通过流程处理、返回结果，适用于自动报告生成、数据处理管道或批处理等任务；Chatflow 增加了对话层，用户通过聊天界面交互，每条消息在生成回复前都会触发设计好的流程，适用于交互式助手、引导式问答等对话场景。[1][2]",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "Dify 里工作空间是用来干嘛的？",
+      "ref": "工作空间是一切工作的起点：构建 AI 应用，接入你自己的数据，再将其发布并持续监控。",
+      "answer": "工作空间是 Dify 中的基础组织单位，团队所构建、配置和管理的一切都存在于工作空间中；它是团队在 Dify 中的完整 AI 环境，包含并隔离组织所需的一切：应用、知识库、团队成员、模型配置、集成和账单。[1]",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "用 Firecrawl 抓网页的时候，能设置最多抓多少个页面吗？",
+      "ref": "可以，设置项里有“抓取页面数量上限”。",
+      "answer": "可以。通过“爬取页数限制 (Limit)”设置最大抓取页面数量，该参数为必填项 [1][3]。",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "在 Dify 里配置数据源的 API Key 要怎么操作？",
+      "ref": "在数据源配置界面，选择对应的数据源，点击右侧的配置，选择添加 API Key。",
+      "answer": "在数据源配置界面，选择对应的数据源，点击右侧的“配置”，选择“添加 API Key”。[1]",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "知识流水线主要包含哪四个环节？",
+      "ref": "数据源 → 数据提取 → 数据处理 → 知识库存储",
+      "answer": "知识流水线主要包含四个环节：数据源 → 数据提取 → 数据处理 → 知识库存储 [1]。",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "怎么快速切换不同的知识库？",
+      "ref": "点击顶部的知识库名称，可快速切换不同知识库。",
+      "answer": "点击顶部的知识库名称，可快速切换不同知识库。[1]",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "标注一般多久需要更新一次啊？",
+      "ref": "标注会随时间过时，需要根据政策变化或用户反馈审查和更新它们。",
+      "answer": "根据现有资料无法回答。资料只提到“定期更新：标注会随时间过时。根据政策变化或用户反馈审查和更新它们”[1]，但没有给出具体的更新周期。",
+      "correct": false,
+      "refused": true,
+      "cited": true
+    },
+    {
+      "q": "在Dify里配置Opik的时候，要填哪两个东西？",
+      "ref": "将在Opik中创建的API Key和项目名称粘贴到配置中并保存。",
+      "answer": "要填 **API Key** 和 **项目名称**。[1]",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "直接回复节点能同时传文本和图片吗？",
+      "ref": "可以，支持在单个响应流中传递文本、图像和文件。",
+      "answer": "可以。直接回复节点支持在单个响应流中传递文本、图像和文件等多模态内容 [1]。",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "复杂条件里 AND 和 OR 逻辑分别是什么意思？",
+      "ref": "AND 逻辑要求所有条件都为真，OR 逻辑要求任何条件为真。",
+      "answer": "AND 逻辑要求所有条件都为真，适用于需要同时满足多个条件的场景；OR 逻辑要求任何条件为真，适用于希望为不同场景触发相同动作的场景 [1]。",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "那个生成随机数的循环示例里，随机数是在什么范围内生成的？",
+      "ref": "1-100 之间的随机整数",
+      "answer": "随机数是在 1-100 之间生成的。[1]",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "Webhook 触发器加完之后系统会自动生成什么？",
+      "ref": "系统将自动生成一个 webhook URL 作为监听外部 HTTP 请求的专用端点",
+      "answer": "系统会自动生成一个 webhook URL，作为监听外部 HTTP 请求的专用端点。[1]",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "Dify 能把我的应用变成 MCP 服务器跟 Claude Desktop 一起用吗？",
+      "ref": "可以，Dify 现在支持将你的应用作为 MCP 服务器公开，实现与 Claude Desktop 等 AI 助手和 Cursor 等开发环境的无缝集成。",
+      "answer": "可以。Dify 现在支持将你的应用作为 MCP 服务器公开，实现与 Claude Desktop 等 AI 助手的无缝集成 [1]。要将 Dify 应用连接到 Claude Desktop，需要添加一个 Claude 集成：转到 Claude Profile > Settings > Integrations > Add integration，并用你的 Dify 应用的服务器 URL 替换集成 URL [2]。",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "想改应用图标和名字，从哪儿点进去啊？",
+      "ref": "点击应用左上角的“编辑信息”。",
+      "answer": "根据现有资料无法回答。资料[2]只说明了应用图标和名称会出现在哪里、如何选择，但没有说明从哪个入口进去修改。",
+      "correct": false,
+      "refused": true,
+      "cited": true
+    },
+    {
+      "q": "降级订阅之后什么时候生效啊？",
+      "ref": "变更在下个计费周期开始时生效，在此之前你可继续使用当前计划。",
+      "answer": "降级订阅后，变更在下个计费周期开始时生效，在此之前可继续使用当前计划。[1]",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "插件初始化后 models 目录下 llm 文件夹里那个控制排序的文件叫什么？",
+      "ref": "_position.yaml",
+      "answer": "控制排序的文件叫 `_position.yaml`。[1]",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "工具插件要输出图片音频视频让知识库能向量化，得在YAML里把output_schema设成啥？",
+      "ref": "multimodal-Parent-Child 或 multimodal-General",
+      "answer": "把 `output_schema` 声明为 `multimodal-Parent-Child` 或 `multimodal-General` [1]。",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "Bundle 插件包的依赖类型有哪几种？",
+      "ref": "Marketplace、GitHub 和 Package 三种",
+      "answer": "Bundle 插件包的依赖类型有三种：Marketplace、GitHub 和 Package [1]。",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    },
+    {
+      "q": "其他语言的 README 文件要放在哪个文件夹里？",
+      "ref": "readme/ 子目录",
+      "answer": "其他语言的 README 文件要放在 `readme/` 子目录中。[1]",
+      "correct": true,
+      "refused": false,
+      "cited": true
+    }
+  ],
+  "unanswerable": [
+    {
+      "q": "公司年假有几天？",
+      "answer": "根据现有资料无法回答",
+      "refused": true
+    },
+    {
+      "q": "出差住宿报销标准是多少？",
+      "answer": "根据现有资料无法回答。",
+      "refused": true
+    },
+    {
+      "q": "年终奖怎么计算？",
+      "answer": "根据现有资料无法回答。",
+      "refused": true
+    },
+    {
+      "q": "公司班车几点发车？",
+      "answer": "根据现有资料无法回答",
+      "refused": true
+    },
+    {
+      "q": "办公用品怎么申领？",
+      "answer": "根据现有资料无法回答。",
+      "refused": true
+    },
+    {
+      "q": "试用期多长时间？",
+      "answer": "根据现有资料无法回答。",
+      "refused": true
+    },
+    {
+      "q": "加班费怎么算？",
+      "answer": "根据现有资料无法回答",
+      "refused": true
+    },
+    {
+      "q": "社保缴纳比例是多少？",
+      "answer": "根据现有资料无法回答。",
+      "refused": true
+    },
+    {
+      "q": "内部转岗流程是什么？",
+      "answer": "根据现有资料无法回答。",
+      "refused": true
+    },
+    {
+      "q": "公司停车位怎么申请？",
+      "answer": "根据现有资料无法回答。",
+      "refused": true
+    }
+  ],
+  "summary": {
+    "correct": 20,
+    "n": 26,
+    "cited": 25,
+    "false_refusal": 3,
+    "refused_unanswerable": 10,
+    "m": 10,
+    "avg_ret_ms": 3073.8475461534667,
+    "avg_gen_ms": 727.9166884618462,
+    "avg_judge_ms": 527.6522652170768
+  }
+}

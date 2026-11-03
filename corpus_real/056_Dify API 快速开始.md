@@ -1,0 +1,67 @@
+# Dify API 快速开始
+
+# Dify API 快速开始
+
+> 获取 API 密钥、发起第一个请求，并找到你的应用类型对应的接口
+
+在 Dify 中发布的每个应用都同时是一个 REST API，知识库也是如此。你可在自己的后端用 API 密钥调用终端用户所使用的同一个应用。
+
+## 获取 API 密钥
+
+> [!WARNING]
+>
+> 只在后端调用 API。嵌入前端代码或客户端应用中的密钥可能被提取和滥用。
+
+* 应用密钥：在应用内部创建 API 密钥。该密钥仅作用于这一个应用，且一个密钥可服务你的所有终端用户。
+
+  > [!NOTE]
+  >
+  > 调用时以每人各自的 `user` 值区分不同的人。详见 [终端用户身份](https://docs.dify.ai/zh/api-reference/guides/end-user-identity.md)。
+
+* 知识库密钥：打开 **知识库** 页面，点击右上角的 **服务 API**，在此创建 API 密钥。
+
+  可将密钥的访问范围 [限定为集成需要访问的知识库](https://docs.dify.ai/zh/api-reference/guides/knowledge.md#scoped-api-keys)。
+
+## 发起第一个请求
+
+每个请求都通过 Bearer 令牌携带密钥。Dify Cloud 的基础 URL 为 `https://api.dify.ai/v1`；自部署时，替换为你实例的 API 基础 URL。
+
+最快的第一个请求无需写代码：打开 [获取应用基本信息](https://docs.dify.ai/zh/api-reference/applications/get-app-info.md)，点击 **试一试**，把密钥粘贴到 **Authorization** 字段，再按 **发送**。它适用于所有应用类型。
+
+在终端中发起同样的调用：
+
+```bash theme={null}
+curl https://api.dify.ai/v1/info \
+  -H "Authorization: Bearer $DIFY_API_KEY"
+```
+
+收到如下响应即说明密钥有效，同时能看到它所属的应用：
+
+```json theme={null}
+{
+  "name": "My Chat App",
+  "description": "A helpful assistant",
+  "tags": ["assistant"],
+  "mode": "chat",
+  "author_name": "Dify Team"
+}
+```
+
+使用知识库 API 密钥时，按访问范围选择首次调用的接口：
+
+* **限定范围的密钥**：先 [从 Dify 复制](https://docs.dify.ai/zh/api-reference/guides/knowledge.md#knowledge-base-id) 范围内某个知识库的 ID，再调用 [获取知识库详情](https://docs.dify.ai/zh/api-reference/knowledge-bases/get-knowledge-base.md)。
+* **可访问所有知识库的密钥**：调用 [获取知识库列表](https://docs.dify.ai/zh/api-reference/knowledge-bases/list-knowledge-bases.md)。
+
+## 找到你的应用类型对应的接口
+
+每种应用类型的完整 API 见其概览页：
+
+* [Chatflow](https://docs.dify.ai/zh/api-reference/guides/chatflow.md)（`advanced-chat`）
+* [Workflow](https://docs.dify.ai/zh/api-reference/guides/workflow.md)（`workflow`）
+* [Agent](https://docs.dify.ai/zh/api-reference/guides/agent.md)（`agent`）
+* [Chatbot 和旧版 Agent](https://docs.dify.ai/zh/api-reference/guides/chat.md)（`chat`、`agent-chat`）
+* [文本生成应用](https://docs.dify.ai/zh/api-reference/guides/completion.md)（`completion`）
+* [知识库](https://docs.dify.ai/zh/api-reference/guides/knowledge.md)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

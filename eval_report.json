@@ -1,0 +1,118 @@
+{
+  "retrieval": {
+    "hit1": 0.9166666666666666,
+    "hit3": 1.0,
+    "mrr": 0.9583333333333334
+  },
+  "scores": {
+    "answerable_min": 0.026528839021921158,
+    "unanswerable_max": 0.08420956134796143
+  },
+  "generation": {
+    "correct": 12,
+    "total_answerable": 12,
+    "cited": 12,
+    "false_refusal": 1,
+    "refused_unanswerable": 5,
+    "total_unanswerable": 5,
+    "rows": [
+      {
+        "q": "我下周去上海出差，酒店能住多少钱的？",
+        "answer": "上海属于一线城市，住宿费每晚上限 600 元，限额内凭票实报实销；超标部分原则上由个人承担，因展会、旺季等特殊原因超标的，需在报销时附部门负责人书面说明。[1]",
+        "correct": true,
+        "refused": false
+      },
+      {
+        "q": "出差吃饭公司给补贴吗，一天多少？",
+        "answer": "出差期间餐饮补助按每人每天 120 元定额发放，无需提供发票；当日往返且在外停留不足 8 小时的不发放。[1]",
+        "correct": true,
+        "refused": false
+      },
+      {
+        "q": "出差回来一个月了还能报销吗？",
+        "answer": "根据现有资料无法回答。资料仅规定“出差结束后 15 个自然日内提交报销单，逾期需部门总监审批”[1]，未说明出差回来一个月（超过15个自然日）是否仍可报销。",
+        "correct": true,
+        "refused": true
+      },
+      {
+        "q": "打车费最多能报多少？",
+        "answer": "市内交通凭票报销，单程不超过 100 元；跨城打车超过 500 元的，需提前在 OA 提交用车申请。[1]",
+        "correct": true,
+        "refused": false
+      },
+      {
+        "q": "实习生账号是不是到期就停了？",
+        "answer": "是的，实习生账号默认有效期6个月，到期自动停用。[1]",
+        "correct": true,
+        "refused": false
+      },
+      {
+        "q": "密码老是要改，多久一次啊？",
+        "answer": "密码每 90 天强制更换一次。[1]",
+        "correct": true,
+        "refused": false
+      },
+      {
+        "q": "VPN 证书过期会报什么错？",
+        "answer": "VPN 证书过期会报 ERR-1042 [1]。",
+        "correct": true,
+        "refused": false
+      },
+      {
+        "q": "账号密码输错太多次被锁了怎么办？",
+        "answer": "等待 30 分钟自动解锁，或由 IT 手动解锁。[2]",
+        "correct": true,
+        "refused": false
+      },
+      {
+        "q": "这个版本能传 PDF 吗？",
+        "answer": "能。Q3-2024 版本支持 PDF 格式，单文件上限 100 MB。[1]",
+        "correct": true,
+        "refused": false
+      },
+      {
+        "q": "私有化部署的机器最低什么配置？",
+        "answer": "私有化部署最低配置：8 核 CPU / 32 GB 内存 / 200 GB SSD，推荐搭配 1 张 24 GB 显存 GPU。[1]",
+        "correct": true,
+        "refused": false
+      },
+      {
+        "q": "年假满三年能休几天？",
+        "answer": "满 3 年享受 10 天年假。[1]",
+        "correct": true,
+        "refused": false
+      },
+      {
+        "q": "整个系统挂了，多久得有人响应？",
+        "answer": "整个系统挂了属于 P0（服务完全不可用），首次响应时限为 15 分钟 [1]。",
+        "correct": true,
+        "refused": false
+      },
+      {
+        "q": "公司年会今年在哪个酒店办？",
+        "answer": "根据现有资料无法回答。",
+        "refused": true
+      },
+      {
+        "q": "年终奖什么时候发？",
+        "answer": "根据现有资料无法回答。",
+        "refused": true
+      },
+      {
+        "q": "食堂几点开饭？",
+        "answer": "根据现有资料无法回答。",
+        "refused": true
+      },
+      {
+        "q": "股票期权怎么行权？",
+        "answer": "根据现有资料无法回答。",
+        "refused": true
+      },
+      {
+        "q": "怎么申请内部转岗到算法组？",
+        "answer": "根据现有资料无法回答。",
+        "refused": true
+      }
+    ]
+  }
+}

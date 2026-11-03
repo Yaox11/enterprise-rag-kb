@@ -1,0 +1,17 @@
+# 密钥与本地配置
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 缓存与临时产物
+work/
+*.npy
+.streamlit/
+
+# 系统
+.DS_Store
+Thumbs.db
+

@@ -1,0 +1,419 @@
+{
+  "meta": {
+    "corpus": "corpus_real",
+    "chunks": 6036,
+    "single_hop_count": 26,
+    "multi_hop_count": 8,
+    "unanswerable_count": 10
+  },
+  "single_hop": [
+    {
+      "q": "更新应用标注的接口路径是什么？",
+      "answer": "put /apps/annotations/{annotation_id}",
+      "key": "/apps/annotations/{annotation_id}",
+      "gold_chunks": [
+        "006_更新标注.md#0",
+        "006_更新标注.md#1",
+        "006_更新标注.md#2",
+        "006_更新标注.md#3",
+        "006_更新标注.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "停止 completion-messages 任务要调哪个接口？",
+      "answer": "POST /completion-messages/{task_id}/stop",
+      "key": "completion-messages/{task_id}/stop",
+      "gold_chunks": [
+        "026_停止响应.md#0",
+        "026_停止响应.md#1",
+        "026_停止响应.md#2",
+        "026_停止响应.md#3",
+        "026_停止响应.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "macOS 上装 difyctl 那个脚本会把它装到哪个目录？",
+      "answer": "脚本会安装到 ~/.local/bin/difyctl",
+      "key": "~/.local/bin/difyctl",
+      "gold_chunks": [
+        "096_安装 difyctl.md#0",
+        "096_安装 difyctl.md#1",
+        "096_安装 difyctl.md#2",
+        "096_安装 difyctl.md#3",
+        "096_安装 difyctl.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "difyctl 列表命令默认一页显示多少条啊？能改吗？",
+      "answer": "默认页大小是 20，可以通过 DIFY_LIMIT 变量修改，取值 1 到 200，且 --limit 参数优先级高于该变量。",
+      "key": "默认页大小是 20",
+      "gold_chunks": [
+        "106_环境变量.md#0",
+        "106_环境变量.md#1",
+        "106_环境变量.md#2",
+        "106_环境变量.md#3",
+        "106_环境变量.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "不加 -o 参数的时候默认输出里都有啥内容？",
+      "answer": "完整报告：一个 Client 区块、一个 Server 区块，以及一行 Compatibility 判定；当版本所在的发布通道不是 stable 时，会追加一条建议改用 stable 通道的警告。",
+      "key": "Compatibility 判定",
+      "gold_chunks": [
+        "111_版本.md#0",
+        "111_版本.md#1",
+        "111_版本.md#2",
+        "111_版本.md#3",
+        "111_版本.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "怎么让聊天助手根据不同用户自动填不同的信息，不用每次都改提示词？",
+      "answer": "可以添加变量来预先收集必要的信息，变量是提示词中的占位符，每个变量都会显示为一个输入字段，用户在对话开始前填写，其值在运行时注入提示词。",
+      "key": "变量是提示词中的占位符",
+      "gold_chunks": [
+        "116_聊天助手.md#0",
+        "116_聊天助手.md#1",
+        "116_聊天助手.md#2",
+        "116_聊天助手.md#3",
+        "116_聊天助手.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "哪些节点可以设置错误处理？",
+      "answer": "大型语言模型、HTTP、代码和工具节点",
+      "key": "LLM、HTTP、代码和工具",
+      "gold_chunks": [
+        "121_处理错误.md#0",
+        "121_处理错误.md#1",
+        "121_处理错误.md#2",
+        "121_处理错误.md#3",
+        "121_处理错误.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "Workflow 和 Chatflow 在用户交互上到底有啥区别？",
+      "answer": "工作流从头到尾运行一次，Chatflow 增加了对话层。",
+      "key": "增加了对话层",
+      "gold_chunks": [
+        "126_Workflow 与 Chatflow.md#0",
+        "126_Workflow 与 Chatflow.md#1",
+        "126_Workflow 与 Chatflow.md#2",
+        "126_Workflow 与 Chatflow.md#3",
+        "126_Workflow 与 Chatflow.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "Dify 里工作空间是用来干嘛的？",
+      "answer": "工作空间是一切工作的起点：构建 AI 应用，接入你自己的数据，再将其发布并持续监控。",
+      "key": "一切工作的起点",
+      "gold_chunks": [
+        "131_使用 Dify.md#0",
+        "131_使用 Dify.md#1",
+        "131_使用 Dify.md#2",
+        "131_使用 Dify.md#3",
+        "131_使用 Dify.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "用 Firecrawl 抓网页的时候，能设置最多抓多少个页面吗？",
+      "answer": "可以，设置项里有“抓取页面数量上限”。",
+      "key": "抓取页面数量上限",
+      "gold_chunks": [
+        "136_从网页导入数据.md#0",
+        "136_从网页导入数据.md#1",
+        "136_从网页导入数据.md#2",
+        "136_从网页导入数据.md#3",
+        "136_从网页导入数据.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "在 Dify 里配置数据源的 API Key 要怎么操作？",
+      "answer": "在数据源配置界面，选择对应的数据源，点击右侧的配置，选择添加 API Key。",
+      "key": "添加 API Key",
+      "gold_chunks": [
+        "141_数据源授权.md#0",
+        "141_数据源授权.md#1",
+        "141_数据源授权.md#2",
+        "141_数据源授权.md#3",
+        "141_数据源授权.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "知识流水线主要包含哪四个环节？",
+      "answer": "数据源 → 数据提取 → 数据处理 → 知识库存储",
+      "key": "数据源 → 数据提取 → 数据处理 → 知识库存储",
+      "gold_chunks": [
+        "146_构建自定义知识库.md#0",
+        "146_构建自定义知识库.md#1",
+        "146_构建自定义知识库.md#2",
+        "146_构建自定义知识库.md#3",
+        "146_构建自定义知识库.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "怎么快速切换不同的知识库？",
+      "answer": "点击顶部的知识库名称，可快速切换不同知识库。",
+      "key": "点击顶部知识库名称",
+      "gold_chunks": [
+        "151_维护知识库内容.md#0",
+        "151_维护知识库内容.md#1",
+        "151_维护知识库内容.md#2",
+        "151_维护知识库内容.md#3",
+        "151_维护知识库内容.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "标注一般多久需要更新一次啊？",
+      "answer": "标注会随时间过时，需要根据政策变化或用户反馈审查和更新它们。",
+      "key": "定期更新",
+      "gold_chunks": [
+        "156_标注系统.md#0",
+        "156_标注系统.md#1",
+        "156_标注系统.md#2",
+        "156_标注系统.md#3",
+        "156_标注系统.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "在Dify里配置Opik的时候，要填哪两个东西？",
+      "answer": "将在Opik中创建的API Key和项目名称粘贴到配置中并保存。",
+      "key": "API Key和项目名称",
+      "gold_chunks": [
+        "161_集成 Opik.md#0",
+        "161_集成 Opik.md#1",
+        "161_集成 Opik.md#2",
+        "161_集成 Opik.md#3",
+        "161_集成 Opik.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "直接回复节点能同时传文本和图片吗？",
+      "answer": "可以，支持在单个响应流中传递文本、图像和文件。",
+      "key": "单个响应流",
+      "gold_chunks": [
+        "166_直接回复.md#0",
+        "166_直接回复.md#1",
+        "166_直接回复.md#2",
+        "166_直接回复.md#3",
+        "166_直接回复.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "复杂条件里 AND 和 OR 逻辑分别是什么意思？",
+      "answer": "AND 逻辑要求所有条件都为真，OR 逻辑要求任何条件为真。",
+      "key": "所有条件都为真",
+      "gold_chunks": [
+        "171_If-Else.md#0",
+        "171_If-Else.md#1",
+        "171_If-Else.md#2",
+        "171_If-Else.md#3",
+        "171_If-Else.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "那个生成随机数的循环示例里，随机数是在什么范围内生成的？",
+      "answer": "1-100 之间的随机整数",
+      "key": "1-100",
+      "gold_chunks": [
+        "176_循环.md#0",
+        "176_循环.md#1",
+        "176_循环.md#2",
+        "176_循环.md#3",
+        "176_循环.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "Webhook 触发器加完之后系统会自动生成什么？",
+      "answer": "系统将自动生成一个 webhook URL 作为监听外部 HTTP 请求的专用端点",
+      "key": "自动生成 webhook URL",
+      "gold_chunks": [
+        "186_Webhook 触发器.md#0",
+        "186_Webhook 触发器.md#1",
+        "186_Webhook 触发器.md#2",
+        "186_Webhook 触发器.md#3",
+        "186_Webhook 触发器.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "Dify 能把我的应用变成 MCP 服务器跟 Claude Desktop 一起用吗？",
+      "answer": "可以，Dify 现在支持将你的应用作为 MCP 服务器公开，实现与 Claude Desktop 等 AI 助手和 Cursor 等开发环境的无缝集成。",
+      "key": "作为 MCP 服务器公开",
+      "gold_chunks": [
+        "191_MCP 服务器.md#0",
+        "191_MCP 服务器.md#1",
+        "191_MCP 服务器.md#2",
+        "191_MCP 服务器.md#3",
+        "191_MCP 服务器.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "想改应用图标和名字，从哪儿点进去啊？",
+      "answer": "点击应用左上角的“编辑信息”。",
+      "key": "左上角的编辑信息",
+      "gold_chunks": [
+        "201_管理应用.md#0",
+        "201_管理应用.md#1",
+        "201_管理应用.md#2",
+        "201_管理应用.md#3",
+        "201_管理应用.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "降级订阅之后什么时候生效啊？",
+      "answer": "变更在下个计费周期开始时生效，在此之前你可继续使用当前计划。",
+      "key": "下个计费周期开始时",
+      "gold_chunks": [
+        "206_计费.md#0",
+        "206_计费.md#1",
+        "206_计费.md#2",
+        "206_计费.md#3",
+        "206_计费.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "插件初始化后 models 目录下 llm 文件夹里那个控制排序的文件叫什么？",
+      "answer": "_position.yaml",
+      "key": "_position.yaml",
+      "gold_chunks": [
+        "211_模型供应商插件.md#0",
+        "211_模型供应商插件.md#1",
+        "211_模型供应商插件.md#2",
+        "211_模型供应商插件.md#3",
+        "211_模型供应商插件.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "工具插件要输出图片音频视频让知识库能向量化，得在YAML里把output_schema设成啥？",
+      "answer": "multimodal-Parent-Child 或 multimodal-General",
+      "key": "multimodal-Parent-Child",
+      "gold_chunks": [
+        "216_多模态工具.md#0",
+        "216_多模态工具.md#1",
+        "216_多模态工具.md#2",
+        "216_多模态工具.md#3",
+        "216_多模态工具.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "Bundle 插件包的依赖类型有哪几种？",
+      "answer": "Marketplace、GitHub 和 Package 三种",
+      "key": "Marketplace、GitHub 和 Package",
+      "gold_chunks": [
+        "221_Bundle 插件包.md#0",
+        "221_Bundle 插件包.md#1",
+        "221_Bundle 插件包.md#2",
+        "221_Bundle 插件包.md#3",
+        "221_Bundle 插件包.md#4"
+      ],
+      "rank": null
+    },
+    {
+      "q": "其他语言的 README 文件要放在哪个文件夹里？",
+      "answer": "readme/ 子目录",
+      "key": "readme/ 子目录",
+      "gold_chunks": [
+        "231_多语言 README.md#0",
+        "231_多语言 README.md#1",
+        "231_多语言 README.md#2",
+        "231_多语言 README.md#3",
+        "231_多语言 README.md#4"
+      ],
+      "rank": null
+    }
+  ],
+  "multi_hop": [
+    {
+      "q": "迭代节点和循环节点在工作流里分别适合什么场景？",
+      "gold_docs": [
+        "172_迭代.md",
+        "176_循环.md"
+      ]
+    },
+    {
+      "q": "应用发布后，运行日志和运行历史分别在哪里看？",
+      "gold_docs": [
+        "164_日志.md",
+        "128_运行历史.md"
+      ]
+    },
+    {
+      "q": "想把 Dify 接进外部系统，Webhook 触发器和 MCP 服务器分别怎么用？",
+      "gold_docs": [
+        "186_Webhook 触发器.md",
+        "191_MCP 服务器.md"
+      ]
+    },
+    {
+      "q": "创建子分段和删除子分段分别调哪个接口？",
+      "gold_docs": [
+        "016_创建子分段.md",
+        "018_删除子分段.md"
+      ]
+    },
+    {
+      "q": "自部署时 API 基础 URL 怎么配？执行工作流又该调哪个接口？",
+      "gold_docs": [
+        "056_Dify API 快速开始.md",
+        "091_执行工作流.md"
+      ]
+    },
+    {
+      "q": "变量聚合器和 If-Else 节点分别解决什么问题？",
+      "gold_docs": [
+        "188_变量聚合器.md",
+        "171_If-Else.md"
+      ]
+    },
+    {
+      "q": "知识库内容维护和标注系统分别用来做什么？",
+      "gold_docs": [
+        "151_维护知识库内容.md",
+        "156_标注系统.md"
+      ]
+    },
+    {
+      "q": "直接回复节点和输出节点有什么区别？",
+      "gold_docs": [
+        "166_直接回复.md",
+        "177_输出.md"
+      ]
+    }
+  ],
+  "unanswerable": [
+    "公司年假有几天？",
+    "出差住宿报销标准是多少？",
+    "年终奖怎么计算？",
+    "公司班车几点发车？",
+    "办公用品怎么申领？",
+    "试用期多长时间？",
+    "加班费怎么算？",
+    "社保缴纳比例是多少？",
+    "内部转岗流程是什么？",
+    "公司停车位怎么申请？"
+  ]
+}

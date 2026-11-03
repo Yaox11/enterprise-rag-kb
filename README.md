@@ -96,6 +96,8 @@ GET  /health
 POST /ask   {"question": "...", "top_k": 3}
 POST /reindex        重建索引（改完 corpus 后调用，无需重启）
 POST /refresh        增量更新（只处理新增 / 修改 / 删除的文件）
+
+配置 `AUTH_TOKENS` 后，`/ask` 需要携带 `X-API-Token` 请求头。
 ```
 
 返回示例：
@@ -243,6 +245,36 @@ outputs\run.cmd outputs\rag-kb-agent\stage6_eval_real.py
 | 删除一篇 | 544 ms | chunks 回到 6036，问题重新拒答 |
 
 对比全量重建：有 embedding 缓存约 6 秒，无缓存要数分钟。
+
+### 鉴权（可选）
+
+默认是开发模式：信任请求体里的 `dept/clearance`。配置 token 后切换为真实身份：
+
+```
+AUTH_TOKENS=dev-dev:研发:1,fin-fin:财务:2,all-all:全员:0
+```
+
+格式是 `token:部门:密级`，逗号分隔。配置后 `/ask` 必须带 `X-API-Token`，
+**身份以 token 为准，请求体里的权限字段被忽略**。
+
+| 请求 | 结果 |
+| --- | --- |
+| 无 token / 错误 token | 401 |
+| 研发 token 问计费问题 | 拒答（最高分 0.005） |
+| 财务 token 问计费问题 | 正常回答（最高分 0.677） |
+
+生产环境应把 token 换成 OIDC/JWT，并从网关解析身份，而不是共享静态 token。
+
+### Docker
+
+```bash
+docker compose up --build
+```
+
+API 在 8000、界面在 8501；模型缓存在 `hf_cache` 卷里，重启不用重新下载。
+
+> 注意：本机没有安装 Docker，`Dockerfile` 与 `docker-compose.yml` **未实际构建验证**，
+> 只做了语法与路径检查。首次构建需要下载 CPU 版 torch，体积约 1 GB。
 
 ## 已知限制
 
